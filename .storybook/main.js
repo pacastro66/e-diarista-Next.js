@@ -1,10 +1,12 @@
 const path = require("path");
 const { config } = require("process");
-const toPath=(_path)=> path.join(process.cwd(),'src')
+
+
+const toPath=(_path)=> path.join(process.cwd(),_path)
 
 module.exports = {
 
-  webpackFial:async(config)=>{
+  webpackFinal:async(config)=>{
     config.resolve.modules.push(toPath('src'));
     config.resolve.alias['@emotion/core']=toPath('node_modules/@emotion/react');
     config.resolve.alias['@emotion/styled']=toPath('node_modules/@emotion/styled');
@@ -14,8 +16,8 @@ module.exports = {
 
   },
   stories: [
-    "../stories/**/*.stories.mdx",
-    "../stories/**/*.stories.@(js|jsx|ts|tsx)"
+    "../src/**/*.stories.mdx",
+    "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   addons: [
     "@storybook/addon-links",

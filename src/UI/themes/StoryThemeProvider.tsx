@@ -1,13 +1,13 @@
 import { ThemeProvider } from "@mui/material/styles";
 import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
-import theme from "./light-themes";
-import { storyNameFromExport } from "@storybook/csf";
+import theme from "./theme";
+
 
 
 const StoryThemeProvider = (storyFn:any)=>(
     <ThemeProvider theme={theme}>
         <EmotionThemeProvider theme={theme}>
-            {storyFn}
+            {storyFn()}
         </EmotionThemeProvider>
 
     </ThemeProvider>
