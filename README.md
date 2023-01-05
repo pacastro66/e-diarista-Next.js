@@ -1,3 +1,14 @@
+clonando o projeto 
+git clone https://github.com/pacastro66/e-diarista-Next.js
+
+instalando as dependencias npm i | npm install
+
+abrindo storybook 
+npm run storybook
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

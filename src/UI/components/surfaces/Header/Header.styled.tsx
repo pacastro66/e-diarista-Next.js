@@ -1,5 +1,5 @@
 import {styled} from "@mui/material/styles";
-import {AppBar} from "@mui/material";
+import {AppBar, Drawer} from "@mui/material";
 
 
 export const HeaderAppBar = styled(AppBar)`
@@ -8,29 +8,49 @@ export const HeaderAppBar = styled(AppBar)`
     box-shadow: 0px 5px 4px rgba(0,0,0,0.05);
     color:${({theme}) => theme.palette.text.secondary}
     }
+    .MuiToolbar-root {
+        display: grid;
+        grid-template-columns: 52px auto 52px;
+        justify-content: space-between;
+    };
+
     ${({theme}) => theme.breakpoints.up("md")} {
         .MuiToolbar-root {
            display:grid;
            grid-template-columns: auto auto 1fr auto;
            gap: ${({theme}) => theme.spacing(9)};
-           heigth: 100px;
-       
+           height: 100px;
+               
         }
        }
-        `;   
-
+        `; 
 
 export const HeaderLogo = styled("img")`
+    height: 25px;
     ${({theme})=> theme.breakpoints.up("md")}{
-        heigth: 47px;
+        height: 47px;
+      
     }
 
 `;
-
 
 export const ButtonContainer = styled("div")`
     display : grid;
     grid-template-columns: repeat(3,auto);
     gap: ${({theme}) => theme.spacing(2)}
+
+`;
+
+export const HeaderDrawer = styled(Drawer)`
+  .MuiPaper-root{
+    padding: ${({theme}) => theme.spacing()} ;
+    background-color: ${({theme}) =>theme.palette.primary.main};
+    color: ${({theme}) =>theme.palette.primary.contrastText};
+  } 
+  
+  .MuiDivider-root{
+    margin: ${({theme}) =>theme.spacing(2)};
+    border-color: ${({theme}) =>theme.palette.primary.light};
+  }
 
 `;
