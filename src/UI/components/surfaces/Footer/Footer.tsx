@@ -1,5 +1,7 @@
+import { FooterContainer } from "./Footer.style";
+
 const Footer = () =>{
-    return <div></div>
+    return <FooterContainer>wwwwwww</FooterContainer>
 }
 
 export default Footer;
