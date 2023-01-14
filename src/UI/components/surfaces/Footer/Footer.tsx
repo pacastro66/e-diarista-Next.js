@@ -1,6 +1,15 @@
 import {  Box, List, Typography } from "@mui/material";
 import Link from "UI/components/navigation/Link/Link";
-import { FooterContainer,FooterGrid,FooterListItem,FooterTitle } from "./Footer.style";
+import { 
+    AppList,
+    FooterContainer,
+    FooterGrid,
+    FooterListItem,
+    FooterSocialList,
+    FooterTitle,
+    SocialButton,
+    SocialContainer 
+    } from "./Footer.style";
 
 
 const Footer = () =>{
@@ -47,11 +56,33 @@ const Footer = () =>{
                     com total segurança e praticidade! são milhares de clientes
                     satisfeitos por todo o país.
                 </Typography>
-                </Box>
-                        
+                </Box>                       
 
-        
-                <FooterTitle>Baixe Nossos aplicativos</FooterTitle>
+                <SocialContainer>
+                    <div>
+                    <FooterTitle>Baixe Nossos aplicativos</FooterTitle>
+                    <AppList>
+                        <li>
+                            <a href="https://apps.apple.com.br/app/treinaweb/id1322729447" target={"_blank"} rel={"noopener noreferrer"}>
+                                <img src="/img/logos/app-store.png" alt={"AppStore"}/>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=br.com.treinaweb.mobile" target={"_blank"} rel={"noopener noreferrer"}>
+                                <img src="/img/logos/google-play.png" alt={"Google Play"}/>
+                            </a>
+                        </li>
+                    </AppList>
+                    </div>
+                    <FooterSocialList>
+                        <FooterListItem>
+                         <SocialButton>
+                            <i className="twf-facebook-f"/>
+                         </SocialButton>
+                        </FooterListItem>
+                    </FooterSocialList>
+                </SocialContainer>
             </FooterGrid>
            </FooterContainer>
     );
