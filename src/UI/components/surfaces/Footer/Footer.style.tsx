@@ -31,6 +31,17 @@ export const FooterListItem=styled((props: PropsWithChildren)=>(
 export const SocialContainer= styled("div")`
     display: flex;
     flex-direction: column;
+    ${({theme})=>theme.breakpoints.down('md')}{
+      width  : 100%;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+    }
+    ${({theme})=>theme.breakpoints.down(726)}{
+        flex-direction: column;
+
+    }
+
 `;
 export const AppList = styled("ul")`
     display: flex;

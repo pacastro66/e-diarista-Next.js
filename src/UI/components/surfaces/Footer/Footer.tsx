@@ -20,7 +20,7 @@ const Footer = () =>{
                 <FooterTitle> Menu</FooterTitle>
                 <List>
                     <FooterListItem>
-                        <Link href="encontrar-diarista" 
+                        <Link href="/encontrar-diarista" 
                             mui={{color:"inherit", variant:"body2"}}>
                             Encontre um(a)diarista
                         </Link>
@@ -75,13 +75,30 @@ const Footer = () =>{
                         </li>
                     </AppList>
                     </div>
+                    <div>
+
+                    <FooterTitle>Redes Sociais</FooterTitle>
+                    <FooterTitle>
                     <FooterSocialList>
                         <FooterListItem>
-                         <SocialButton>
-                            <i className="twf-facebook-f"/>
-                         </SocialButton>
+                            <SocialButton href="/">
+                                <i className="twf-facebook-f"/>
+                            </SocialButton>
+                        </FooterListItem>                  
+                        <FooterListItem>
+                            <SocialButton href="/">
+                                <i className="twf-instagram"/>
+                            </SocialButton>
+                        </FooterListItem>
+                         <FooterListItem>
+                            <SocialButton href="/">
+                                <i className="twf-youtube"/>
+                            </SocialButton>
                         </FooterListItem>
                     </FooterSocialList>
+
+                    </FooterTitle>
+                    </div>
                 </SocialContainer>
             </FooterGrid>
            </FooterContainer>
