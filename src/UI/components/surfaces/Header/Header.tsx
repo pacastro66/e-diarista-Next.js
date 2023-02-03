@@ -26,9 +26,13 @@ const HeaderDesktop:React.FC = () => {
             <div>&nbsp;</div>    
 
             <ButtonContainer>
-
-            <Link Component={RoundedButton} mui={{variant:"contained",color:"primary"}} href="/cadastro/diarista">Seja um(a) diarista</Link>
-            <Link href="/login">Login</Link>
+                <Link Component={RoundedButton}
+                mui={{variant:"contained",color:"primary"}}
+                href="/cadastro/diarista"
+                >
+                    Seja um(a) diarista
+                </Link>
+            <Link href="/login" Component={RoundedButton}>Login</Link>
 
             </ButtonContainer>
         </Toolbar>
