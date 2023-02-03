@@ -3,7 +3,7 @@ import { Link as MuiLink,LinkProps as MuiLinkProps, ButtonProps} from "@mui/mate
 import Router from "next/router";
 import React, { PropsWithChildren } from "react";
 
-interface LinkProps{
+export interface LinkProps{
     href: string;
     mui?:MuiLinkProps| ButtonProps;
     next?: NextLinkProps;
