@@ -27,7 +27,7 @@ const Footer = () =>{
                     </FooterListItem>
 
                     <FooterListItem>
-                        <Link href="encontrar-diarista" 
+                        <Link href="/encontrar-diarista" 
                             mui={{color:"inherit", variant:"body2"}}>
                             Seja um(a)diarista
                         </Link>

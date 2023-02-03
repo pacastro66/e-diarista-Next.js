@@ -28,7 +28,7 @@ const Link: React.FC<PropsWithChildren<LinkProps>> =({
     
      
         ):(
-            <Component href={href}  {...mui} {...props} >{children} </Component> 
+            <Component href={href}  {...mui} {...props} >{children}</Component> 
         );
     };
 
