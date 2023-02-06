@@ -7,7 +7,8 @@ import  RoundedButton from "UI/components/inputs/RoundedButton/RoundedButton";
 
 
 export const SectionContainer = styled("section")`
-    min-height:250px ;
+        position: relative;
+        min-height:250px ;
         background-image: url("/img/home/living-room.svg");
         background-repeat: no-repeat;
         background-position: right center;
@@ -150,6 +151,24 @@ export const SectionPictureContainer=styled("div")`
         height: 40px;
         background-color: ${({theme})=>theme.palette.grey[200]};
         z-index: 2;       
+    }
+
+`;
+
+export const ButtonButton =styled("span")`
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,50%);
+    background-color: ${({theme})=>theme.palette.secondary.main};
+    padding: 11px 12px;
+    border-radius: 50px;
+    color: ${({theme})=>theme.palette.common.white};
+    border: 5px solid currentColor;
+
+    i{
+        position: relative;
+        left: -2px;
     }
 
 `;
