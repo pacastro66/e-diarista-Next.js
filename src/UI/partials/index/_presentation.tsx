@@ -1,12 +1,25 @@
+import { useEffect, useState } from "react";
 import 
 { ContainerStyled,
-    SectionButton,
-SectionContainer, 
-SectionSubtitle, 
-SectionTitle 
+   SectionButton,
+   SectionContainer, 
+   SectionPictureContainer, 
+   SectionSubtitle, 
+   SectionTitle 
 } from "./_presentation.styled";
 
 const Presentation =() =>{
+   const [cleanerPicture,setCleanerPicture]=useState("");
+
+   useEffect(()=>{
+      const newClearPicture = 
+      Math.random() < 0.5 
+      ? "/img/home/housekeeper.png"
+      : "/img/home/janitor.png";
+      setCleanerPicture(newClearPicture);
+
+   }, []);
+
     return <SectionContainer>
                 <ContainerStyled>
                 <SectionTitle>
@@ -21,6 +34,10 @@ const Presentation =() =>{
                  <SectionButton href="/encontrar-diarista" mui={{variant:"contained"}}>
                     Encontrar um(a) diarista
                  </SectionButton>
+
+                 <SectionPictureContainer>
+                  <img src={cleanerPicture} alt=""/>
+                 </SectionPictureContainer>
                 
                 </ContainerStyled>
           </SectionContainer>;
