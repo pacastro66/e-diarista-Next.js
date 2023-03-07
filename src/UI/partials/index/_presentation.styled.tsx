@@ -110,8 +110,13 @@ export const SectionTitle=styled("h1")`
 export const SectionButton = styled((props:PropsWithChildren<LinkProps>)=> (
 <Link Component={RoundedButton} {...props}/>))`
  grid-area:button ;
- width: 405px;
+ width: 100%;
  height: 100%;
+
+ ${({theme})=>theme.breakpoints.up("md")}{
+    width: 405px;
+    height: 100%;
+ }
 `;
 
 export const SectionPictureContainer=styled("div")`
